@@ -1,0 +1,49 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": true,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "availability",
+    "dbType": "enum",
+    "htmlType": "select,label1:Monday,label2:Tuesday,label3:Wednesday,label4:Thursday,label5:Friday,label6:Saturaday,label7:Sunday",
+    "validations": "array",
+    "searchable": true
+  },
+  {
+    "name": "payrate",
+    "dbType": "float",
+    "htmlType": "number",
+    "validations": "required,numeric",
+    "searchable": true
+  }
+]
