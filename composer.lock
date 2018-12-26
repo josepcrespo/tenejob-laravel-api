@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "58fc429666825e84b331d4db3e4680f6",
+    "content-hash": "a350a60c71b339a47821b6803d944d41",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3171,7 +3171,7 @@
     "packages-dev": [
         {
             "name": "appointer/swaggervel",
-            "version": "dev-master",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/appointer/swaggervel.git",
@@ -5553,10 +5553,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "infyomlabs/laravel-generator": 20,
         "infyomlabs/adminlte-templates": 20,
-        "infyomlabs/swagger-generator": 20,
-        "appointer/swaggervel": 20
+        "infyomlabs/laravel-generator": 20,
+        "infyomlabs/swagger-generator": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
