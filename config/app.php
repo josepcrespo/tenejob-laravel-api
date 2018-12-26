@@ -163,8 +163,14 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * Package Service Providers...
+         * Third Party Package Service Providers...
          */
+        Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
+        Appointer\Swaggervel\SwaggervelServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -173,16 +179,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-
-        /*
-         * Third Party Providers...
-         */
-        Collective\Html\HtmlServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
-        Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
-        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class
+        App\Providers\RouteServiceProvider::class
 
     ],
 
