@@ -41,7 +41,7 @@
   },
   {
     "name": "payrate",
-    "dbType": "float",
+    "dbType": "float,2,2",
     "htmlType": "number",
     "validations": "required,numeric",
     "searchable": true
