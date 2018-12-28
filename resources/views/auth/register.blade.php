@@ -89,22 +89,27 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-8">
+                <!--<div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
                             <input type="checkbox"> I agree to the <a href="#">terms</a>
                         </label>
                     </div>
-                </div>
+                </div>-->
                 <!-- /.col -->
-                <div class="col-xs-4">
+                <div class="col-xs-12">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{ url('/login') }}" class="text-center">I already have a membership</a>
+        <a href="{{ url('/login') }}"
+           class="text-center"
+           style="text-align: center; width: 100%;display: block; margin-top: 15px;"
+        >
+            I already have a membership
+        </a>
     </div>
     <!-- /.form-box -->
 </div>
