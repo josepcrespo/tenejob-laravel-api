@@ -34,8 +34,9 @@
         }
         .show-menu {
             transform: translate(0, 0);
-            box-shadow: 1px 0px 20px 10px;
-            z-index: 9999;
+            box-shadow: 0px 0px 30px 15px;
+            top: 100px;
+            padding-top: 0;
         }
     </style>
 </head>
@@ -59,10 +60,15 @@
                             class="user user-menu visible-xs-block"
                             style="line-height: 52px; color: white;">
                             <a href="#"
-                               onclick="event.preventDefault();$('aside.main-sidebar').toggleClass('show-menu');"
+                               onclick="
+                                    event.preventDefault();
+                                    $('aside.main-sidebar').toggleClass('show-menu');
+                                    $(this).find('span').text() === 'Show Menu' ?
+                                    $(this).find('span').text('Hide Menu') :
+                                    $(this).find('span').text('Show Menu');"
                             >
                                 <i class="fa fa-bars" aria-hidden="true"></i>
-                                &nbsp;Show Menu
+                                &nbsp;<span>Show Menu</span>
                             </a>
                         </li>
                     </ul>
@@ -72,7 +78,7 @@
                     <ul class="nav navbar-nav pull-right">
                         <!-- User Account Menu -->
                         <li class="user user-menu"
-                            style="line-height: 52px; color: white; margin-right: 0 15px;">
+                            style="line-height: 52px; color: white; margin: 0 15px;">
                             Logged in as <b><u>{!! Auth::user()->name !!}</u></b>.
                             Member since {!! Auth::user()->created_at->format('M. d, Y') !!}
                         </li>
