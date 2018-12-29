@@ -27,6 +27,17 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
     @yield('css')
+    <style>
+        #showMenuBtn {
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        .show-menu {
+            transform: translate(0, 0);
+            box-shadow: 1px 0px 20px 10px;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
 <body class="skin-blue sidebar-mini">
@@ -41,12 +52,27 @@
 
             <!-- Header Navbar -->
             <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Navbar Right Menu -->
-                <div class="navbar-custom-menu">
+                <div class="navbar-custom-menu pull-left">
                     <ul class="nav navbar-nav">
                         <!-- User Account Menu -->
+                        <li id="showMenuBtn"
+                            class="user user-menu visible-xs-block"
+                            style="line-height: 52px; color: white;">
+                            <a href="#"
+                               onclick="event.preventDefault();$('aside.main-sidebar').toggleClass('show-menu');"
+                            >
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                &nbsp;Show Menu
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- User Account Menu -->
                         <li class="user user-menu"
-                            style="line-height: 52px; color: white; margin-right: 15px;">
+                            style="line-height: 52px; color: white; margin-right: 0 15px;">
                             Logged in as <b><u>{!! Auth::user()->name !!}</u></b>.
                             Member since {!! Auth::user()->created_at->format('M. d, Y') !!}
                         </li>
@@ -55,7 +81,7 @@
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                             >
                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
-                                &nbsp;Sign out
+                                &nbsp;Sign Out
                             </a>
                             <form id="logout-form"
                                   action="{{ url('/logout') }}"
