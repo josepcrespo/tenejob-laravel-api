@@ -42,7 +42,7 @@
 
             .links a {
                 color: #636b6f;
-                padding: 15px 25px;
+                padding: 15px 20px;
                 margin: 0 5px;
                 font-size: 16px;
                 font-weight: 600;
@@ -70,7 +70,7 @@
             }
 
             footer.links a {
-                padding: 5px 15px;
+                padding: 5px 10px;
                 font-size: 14px;
                 text-transform: none;
             }
