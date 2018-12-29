@@ -106,7 +106,7 @@
                     <i class="fas fa-envelope"></i>&nbsp;
                     MailDev
                 </a>
-                <a href="/vendor/swaggervel">
+                <a href="/api/docs">
                     <i class="fas fa-book"></i>&nbsp;
                     API Documentation
                 </a>
