@@ -45,32 +45,24 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <!-- User Account Menu -->
-                        <li class="dropdown user user-menu">
-                            <!-- Menu Toggle Button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <span>{!! Auth::user()->name !!}</span>
+                        <li class="user user-menu"
+                            style="line-height: 52px; color: white; margin-right: 15px;">
+                            Logged in as <b><u>{!! Auth::user()->name !!}</u></b>.
+                            Member since {!! Auth::user()->created_at->format('M. d, Y') !!}
+                        </li>
+                        <li class="user user-menu">
+                            <a href="{!! url('/logout') !!}"
+                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                            >
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                &nbsp;Sign out
                             </a>
-                            <ul class="dropdown-menu">
-                                <!-- The user image in the menu -->
-                                <!--<li class="user-header">
-                                    <p>
-                                        Member since {!! Auth::user()->created_at->format('M. Y') !!}
-                                    </p>
-                                </li>-->
-                                <!-- Menu Footer-->
-                                <li class="user-footer">
-                                    <div class="pull-right">
-                                        <a href="{!! url('/logout') !!}" class="btn btn-default btn-flat"
-                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            Sign out
-                                        </a>
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </div>
-                                </li>
-                            </ul>
+                            <form id="logout-form"
+                                  action="{{ url('/logout') }}"
+                                  method="POST"
+                                  style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </li>
                     </ul>
                 </div>
