@@ -1,6 +1,7 @@
 <table class="table table-responsive" id="days-table">
     <thead>
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th colspan="3">Action</th>
         </tr>
@@ -8,6 +9,7 @@
     <tbody>
     @foreach($days as $day)
         <tr>
+            <td>{!! $day->id !!}</td>
             <td>{!! $day->name !!}</td>
             <td>
                 {!! Form::open(['route' => ['days.destroy', $day->id], 'method' => 'delete']) !!}
