@@ -57,7 +57,7 @@
                     <ul class="nav navbar-nav">
                         <!-- User Account Menu -->
                         <li id="showMenuBtn"
-                            class="user user-menu visible-xs-block"
+                            class="user user-menu visible-sm-block"
                             style="line-height: 52px; color: white;">
                             <a href="#"
                                onclick="
