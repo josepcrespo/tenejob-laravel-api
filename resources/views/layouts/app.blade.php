@@ -47,7 +47,7 @@
         <!-- Main Header -->
         <header class="main-header">
             <!-- Logo -->
-            <a href="#" class="logo">
+            <a href="{{ url('/') }}/home" class="logo">
                 <b>TeneJob</b>
             </a>
 
