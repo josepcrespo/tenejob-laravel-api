@@ -102,15 +102,15 @@
                 </div>
             </div>
             <footer class="links">
-                <a href="{{ url('/') }}:1080/">
+                <a href="{{ url('/') }}:1080/" target="_blank">
                     <i class="fas fa-envelope"></i>&nbsp;
                     MailDev
                 </a>
-                <a href="/api/docs">
+                <a href="/api/docs" target="_blank">
                     <i class="fas fa-book"></i>&nbsp;
                     API Documentation
                 </a>
-                <a href="https://github.com/laravel/laravel">
+                <a href="https://github.com/laravel/laravel" target="_blank">
                     <i class="fas fa-code"></i>&nbsp;
                     Code Repository
                 </a>
