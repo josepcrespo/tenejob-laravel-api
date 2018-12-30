@@ -45,7 +45,7 @@ class Matching extends Model
      * @var array
      */
     protected $casts = [
-        
+
     ];
 
     /**
@@ -54,8 +54,8 @@ class Matching extends Model
      * @var array
      */
     public static $rules = [
-        'shift_id'  => 'required|numeric',
-        'worker_id' => 'required|numeric'
+        'shift_id'  => 'required|numeric|unique:matchings',
+        'worker_id' => 'required|numeric',
     ];
 
     /**
