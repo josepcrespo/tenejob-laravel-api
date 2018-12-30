@@ -1,5 +1,6 @@
-<!-- Payrate Field -->
+<!-- Availability Field -->
 <div class="form-group col-sm-6">
+    {!! Form::label('day_ids', 'Availability:') !!}
     {!! Form::select('day_ids[]', $relations['days'],
             isset($shift) ? $shift->days->pluck('id') : NULL,
             [
@@ -9,6 +10,10 @@
             ]
         )
     !!}
+</div>
+
+<!-- Payrate Field -->
+<div class="form-group col-sm-6">
     {!! Form::label('payrate', 'Payrate:') !!}
     {!! Form::number('payrate', null, [
             'class' => 'form-control',
