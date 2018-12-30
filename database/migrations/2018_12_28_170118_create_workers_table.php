@@ -15,7 +15,7 @@ class CreateWorkersTable extends Migration
     {
         Schema::create('workers', function (Blueprint $table) {
             $table->increments('id');
-            $table->float('payrate', 2, 2);
+            $table->float('payrate', 5, 2);
             $table->timestamps();
             $table->softDeletes();
         });
