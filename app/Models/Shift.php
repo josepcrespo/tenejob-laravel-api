@@ -56,7 +56,7 @@ class Shift extends Model
      * @var array
      */
     public static $rules = [
-        
+        'day_ids' => 'required|array'
     ];
 
     /**
@@ -77,5 +77,24 @@ class Shift extends Model
     public function day_ids()
     {
         return $this->days();
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function matching()
+    {
+        return $this->hasOne(\App\Models\Matching::class);
+    }
+
+    /**
+     * This is an alias that we need to make it compatible with the
+     * InfyOm\Generator\Common BaseRepository->updateRelations method.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     **/
+    public function matching_id()
+    {
+        return $this->matching();
     }
 }

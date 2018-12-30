@@ -67,7 +67,7 @@ class Day extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required|unique:days'
+        'name' => 'required|string|unique:days'
     ];
 
     /**

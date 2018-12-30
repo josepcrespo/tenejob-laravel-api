@@ -46,7 +46,8 @@ class Worker extends Model
 
 
     public $fillable = [
-        'payrate'
+        'payrate',
+        'days'
     ];
 
     /**
@@ -64,19 +65,9 @@ class Worker extends Model
      * @var array
      */
     public static $rules = [
-        'payrate' => 'required|numeric'
+        'payrate' => 'required|numeric',
+        'day_ids' => 'required|array'
     ];
-
-    /**
-     * Return the "payrate" with two decimals.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    public function setPayrateAttribute($value)
-    {
-        return ($value);
-    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
@@ -96,5 +87,25 @@ class Worker extends Model
     public function day_ids()
     {
         return $this->days();
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     **/
+    public function matchings()
+    {
+        return $this->hasMany(\App\Models\Matching::class)
+            ->withTimestamps();
+    }
+
+    /**
+     * This is an alias that we need to make it compatible with the
+     * InfyOm\Generator\Common BaseRepository->updateRelations method.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     **/
+    public function matching_ids()
+    {
+        return $this->matchings();
     }
 }
