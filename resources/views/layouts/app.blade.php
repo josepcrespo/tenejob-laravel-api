@@ -57,7 +57,7 @@
                     <ul class="nav navbar-nav">
                         <!-- User Account Menu -->
                         <li id="showMenuBtn"
-                            class="user user-menu visible-sm-block"
+                            class="user user-menu visible-xs-block"
                             style="line-height: 52px; color: white;">
                             <a href="#"
                                onclick="
@@ -77,7 +77,7 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav pull-right">
                         <!-- User Account Menu -->
-                        <li class="user user-menu"
+                        <li class="user user-menu hidden-xs"
                             style="line-height: 52px; color: white; margin: 0 15px;">
                             Logged in as <b><u>{!! Auth::user()->name !!}</u></b>.
                             Member since {!! Auth::user()->created_at->format('M. d, Y') !!}
