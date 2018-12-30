@@ -25,3 +25,5 @@ Route::resource('days', 'DayController');
 Route::resource('shifts', 'ShiftController');
 
 Route::resource('workers', 'WorkerController');
+
+Route::resource('matchings', 'MatchingController');
