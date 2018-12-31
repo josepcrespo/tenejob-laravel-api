@@ -39,6 +39,13 @@ class Matching extends Model
         'worker_id'
     ];
 
+    public $hidden = [
+        'created_at',
+        'updated_at',
+        'shift_id',
+        'worker_id'
+    ];
+
     /**
      * The attributes that should be casted to native types.
      *
