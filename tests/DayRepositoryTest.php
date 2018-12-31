@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 use App\Models\Day;
 use App\Repositories\DayRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;

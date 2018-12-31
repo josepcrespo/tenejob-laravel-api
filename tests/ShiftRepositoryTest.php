@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 use App\Models\Shift;
 use App\Repositories\ShiftRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;

@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 use Faker\Factory as Faker;
 use App\Models\Shift;
 use App\Repositories\ShiftRepository;

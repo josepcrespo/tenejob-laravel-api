@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 trait ApiTestTrait
 {
     public function assertApiResponse(Array $actualData)

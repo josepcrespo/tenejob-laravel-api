@@ -1,8 +1,11 @@
 <?php
 
+namespace Tests;
+
 use Faker\Factory as Faker;
 use App\Models\Day;
 use App\Repositories\DayRepository;
+use Illuminate\Support\Facades\App;
 
 trait MakeDayTrait
 {

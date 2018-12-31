@@ -1,7 +1,12 @@
 <?php
 
+namespace Tests;
+
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\ApiTestTrait;
+use Tests\MakeDayTrait;
+use Tests\TestCase;
 
 class DayApiTest extends TestCase
 {
@@ -13,7 +18,7 @@ class DayApiTest extends TestCase
     public function testCreateDay()
     {
         $day = $this->fakeDayData();
-        $this->json('POST', '/api/v1/days', $day);
+        $this->json('POST', '/api/days', $day);
 
         $this->assertApiResponse($day);
     }
@@ -24,7 +29,7 @@ class DayApiTest extends TestCase
     public function testReadDay()
     {
         $day = $this->makeDay();
-        $this->json('GET', '/api/v1/days/'.$day->id);
+        $this->json('GET', '/api/days/'.$day->id);
 
         $this->assertApiResponse($day->toArray());
     }
@@ -37,7 +42,7 @@ class DayApiTest extends TestCase
         $day = $this->makeDay();
         $editedDay = $this->fakeDayData();
 
-        $this->json('PUT', '/api/v1/days/'.$day->id, $editedDay);
+        $this->json('PUT', '/api/days/'.$day->id, $editedDay);
 
         $this->assertApiResponse($editedDay);
     }
@@ -48,10 +53,10 @@ class DayApiTest extends TestCase
     public function testDeleteDay()
     {
         $day = $this->makeDay();
-        $this->json('DELETE', '/api/v1/days/'.$day->id);
+        $this->json('DELETE', '/api/days/'.$day->id);
 
         $this->assertApiSuccess();
-        $this->json('GET', '/api/v1/days/'.$day->id);
+        $this->json('GET', '/api/days/'.$day->id);
 
         $this->assertResponseStatus(404);
     }
