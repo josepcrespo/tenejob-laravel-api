@@ -202,7 +202,7 @@ You may want to look into [the official Composer guidelines for Installing Depen
 
 `artisan migrate`
 
-7. Open your browser and visit localhost:
+9. Open your browser and visit localhost:
 
 `http://localhost`
 
@@ -245,7 +245,7 @@ If you want tu use the "forgot password" feature, the email with the link to res
 
 The *Unitary Tests* has been made using [PHPUnit](https://phpunit.de/).
 
-1. Assuming that you have all the dependencies installed using *Composer*, you can run the *Unitary Tests* by simply executing entering the Docker Workspace and typing the following command in the root directory of the project:
+Assuming that you have all the dependencies installed using *Composer*, you can run the *Unitary Tests* by simply executing entering the Docker Workspace and typing the following command in the root directory of the project:
 
 `phpunit`
 
