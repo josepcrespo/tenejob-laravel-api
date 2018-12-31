@@ -160,20 +160,20 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 
 2. Open the `.env` file and set the following:
 
-> DB_CONNECTION=mysql
-> DB_HOST=mysql
-> DB_PORT=3306
-> DB_DATABASE=tenejob
-> DB_USERNAME=root
-> DB_PASSWORD=root
-> REDIS_HOST=redis
-> QUEUE_HOST=beanstalkd
-> MAIL_DRIVER=smtp
-> MAIL_HOST=smtp.mailtrap.io
-> MAIL_PORT=2525
-> MAIL_USERNAME=null
-> MAIL_PASSWORD=null
-> MAIL_ENCRYPTION=null
+> DB_CONNECTION=mysql  
+> DB_HOST=mysql  
+> DB_PORT=3306  
+> DB_DATABASE=tenejob  
+> DB_USERNAME=root  
+> DB_PASSWORD=root  
+> REDIS_HOST=redis  
+> QUEUE_HOST=beanstalkd  
+> MAIL_DRIVER=smtp  
+> MAIL_HOST=maildev  
+> MAIL_PORT=25  
+> MAIL_USERNAME=null  
+> MAIL_PASSWORD=null  
+> MAIL_ENCRYPTION=null  
 
 3. Build an run the containers:
 
