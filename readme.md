@@ -19,6 +19,8 @@ Table of contents:
     + [Read the API documentation](#read-the-api-documentation)
     + [MailDev](#maildev)
     + [Run the Tests](#run-the-tests)
+  * [Laradock errors](#laradock-errors)
+    + [Main problems I faced installing Laradock](main-problems-i-faced-installing-laradock)
 
 ----------
 
@@ -250,3 +252,27 @@ Assuming that you have all the dependencies installed using *Composer*, you can 
 `phpunit`
 
 The project have some basic unit tests but, the testing environment are not configured properly so, is expected to get all of them throw a Fail o Error message.
+
+----------
+
+## Laradock errors
+
+----------
+
+### Main problems I faced installing Laradock
+
+----------
+
+This are the main problems (and the solutions I've found) I face executing the `docker-compose up` command the first time, when Docker downloads and installs all the containers needed.
+
+1. Problems with the `mysql` Docker volume:
+
+Delete the folder ~/.laradock/data/mysql in my Mac machine. and everything works.
+
+2. Service `aws` failed to build:
+
+Follow the [instruccions](https://github.com/laradock/laradock/issues/1156#issuecomment-335210337) written in this specific comment on a GitHub thread of the Laradock project repository.
+
+3. SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client:
+
+Follow the [instruccions](https://github.com/laradock/laradock/issues/1392#issuecomment-368320353) written in this specific comment on a GitHub thread of the Laradock project repository.
