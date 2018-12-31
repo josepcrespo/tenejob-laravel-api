@@ -139,6 +139,7 @@ In this section, you can get the instructions to setup this project on your loca
 This project has a few mandatory requirements. Make it sure you you have installed:
 
 [Git](https://git-scm.com/downloads) >= 2.13
+
 [Docker Engine](https://www.docker.com/get-started) >= 17.12
 
 ----------
