@@ -25,3 +25,5 @@ Route::resource('shifts', 'ShiftAPIController');
 Route::resource('workers', 'WorkerAPIController');
 
 Route::resource('matchings', 'MatchingAPIController');
+
+Route::post('matchings/auto-generate', 'MatchingAPIController@autoGenerate');

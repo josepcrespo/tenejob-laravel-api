@@ -30,4 +30,16 @@ class MatchingRepository extends BaseRepository
     {
         return Matching::class;
     }
+
+    public function autoGeneratOutput()
+    {
+        $query = $this->with([
+            'shift.days' => function($query) {
+                return $query->select('name');
+            },
+            'worker'
+        ])->all();
+
+        return $query;
+    }
 }
