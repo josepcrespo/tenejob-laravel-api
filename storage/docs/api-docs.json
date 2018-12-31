@@ -205,6 +205,250 @@
                 }
             }
         },
+        "/matchings": {
+            "get": {
+                "tags": [
+                    "Matching"
+                ],
+                "summary": "Get a listing of the Matchings.",
+                "description": "Get all Matchings",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Matching"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Matching"
+                ],
+                "summary": "Store a newly created Matching in storage",
+                "description": "Store Matching",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Matching that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Matching"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Matching"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/matchings/{id}": {
+            "get": {
+                "tags": [
+                    "Matching"
+                ],
+                "summary": "Display the specified Matching",
+                "description": "Get Matching",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Matching",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Matching"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Matching"
+                ],
+                "summary": "Update the specified Matching in storage",
+                "description": "Update Matching",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Matching",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Matching that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Matching"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Matching"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Matching"
+                ],
+                "summary": "Remove the specified Matching from storage",
+                "description": "Delete Matching",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Matching",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/matchings/auto-generate": {
+            "post": {
+                "tags": [
+                    "Matching"
+                ],
+                "summary": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`",
+                "description": "Drop the current `matchings` and automatically generates new ones.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "A collection of shifts and, a collection of workers",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Matching"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                    "$ref": "#/definitions/Matching"
+                                },
+                                "message": {
+                                    "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
         "/shifts": {
             "get": {
                 "tags": [
@@ -628,6 +872,28 @@
                 "name": {
                     "description": "name",
                     "type": "string"
+                }
+            }
+        },
+        "Matching": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
                 }
             }
         },
