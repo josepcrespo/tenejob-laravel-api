@@ -110,7 +110,7 @@
                     <i class="fas fa-book"></i>&nbsp;
                     API Documentation
                 </a>
-                <a href="https://github.com/laravel/laravel" target="_blank">
+                <a href="https://github.com/josepcrespo/tenejob-laravel-api" target="_blank">
                     <i class="fas fa-code"></i>&nbsp;
                     Code Repository
                 </a>
