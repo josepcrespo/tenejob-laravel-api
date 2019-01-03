@@ -65,15 +65,15 @@ This API provides an endpoint that receives a list of workers and a list of shif
 ### Implementation requirements
 
 Build a dockerized system that can run as a docker container, to test the solution. This requirement is mandatory.
-The endpoint input and output should be sent in JSON format and it need to be REST compliant. The structure and an example of these are provided as an example in a separate file alongside this document.
+The endpoint input and output should be sent in JSON format and it need to be REST compliant. The structure and an example of these are provided in the next section of this README.md file.
  
 This project demo focuses on:
 * Organization of the code, the structure, scaffold and design patterns
 * The efficiency to generate the matchings
 * Documentation and code readability
 * Good development practices:
- + Unit tests
- + Input data validation o Error handling
+  + Unit tests
+  + Input data validation o Error handling
 
 ----------
 
@@ -158,7 +158,7 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 
 `cp env-example .env`
 
-2. Open the `.env` file and set the following:
+2. Open the `.env` file of this project (tenejob-laravel-api) and set the following:
 
 > DB_CONNECTION=mysql  
 > DB_HOST=mysql  
@@ -175,11 +175,11 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 > MAIL_PASSWORD=null  
 > MAIL_ENCRYPTION=null  
 
-3. Build an run the containers:
+3. Execute the following command inside the `laradock` folder, to build an run the containers:
 
 `docker-compose up -d nginx mysql workspace maildev`
 
-4. Access to the MySQL Command-line Client inside the `mysql` container:
+4. Execute the following command inside the `laradock` folder, to get access to the MySQL Command-line Client inside the `mysql` container:
 
 `docker-compose exec mysql mysql -u root -proot`
 
@@ -238,7 +238,7 @@ Read the API documentation through the Swagger web interface at:
 
 ### Maildev
 
-If you want tu use the "forgot password" feature, the email with the link to restore your password will be sent to MailDev (a local mail server for localdevelopment). You can easely acces the web interface at:
+If you want to use the "forgot password" feature, the email with the link to restore your password will be sent to MailDev (a local mail server for local development). You can easely acces the web interface at:
 
 `http://localhost:1080/`
 
@@ -264,7 +264,7 @@ The project have some basic unit tests but, the testing environment are not conf
 
 ----------
 
-This are the main problems (and the solutions I've found) I face executing the `docker-compose up` command the first time, when Docker downloads and installs all the containers needed.
+This are the main problems (and the solutions) I've found executing the `docker-compose up` command the first time, when Docker downloads and installs all the containers needed.
 
 1. Problems with the `mysql` Docker volume:
 
