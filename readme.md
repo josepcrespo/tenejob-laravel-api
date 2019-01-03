@@ -264,7 +264,7 @@ The project have some basic unit tests but, the testing environment are not conf
 
 ----------
 
-This are the main problems (and the solutions I've found) I face executing the `docker-compose up` command the first time, when Docker downloads and installs all the containers needed.
+This are the main problems (and the solutions) I've found executing the `docker-compose up` command the first time, when Docker downloads and installs all the containers needed.
 
 1. Problems with the `mysql` Docker volume:
 
