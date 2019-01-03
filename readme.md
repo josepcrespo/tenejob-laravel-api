@@ -65,15 +65,15 @@ This API provides an endpoint that receives a list of workers and a list of shif
 ### Implementation requirements
 
 Build a dockerized system that can run as a docker container, to test the solution. This requirement is mandatory.
-The endpoint input and output should be sent in JSON format and it need to be REST compliant. The structure and an example of these are provided as an example in a separate file alongside this document.
+The endpoint input and output should be sent in JSON format and it need to be REST compliant. The structure and an example of these are provided in the next section of this README.md file.
  
 This project demo focuses on:
 * Organization of the code, the structure, scaffold and design patterns
 * The efficiency to generate the matchings
 * Documentation and code readability
 * Good development practices:
- + Unit tests
- + Input data validation o Error handling
+  + Unit tests
+  + Input data validation o Error handling
 
 ----------
 
@@ -238,7 +238,7 @@ Read the API documentation through the Swagger web interface at:
 
 ### Maildev
 
-If you want tu use the "forgot password" feature, the email with the link to restore your password will be sent to MailDev (a local mail server for localdevelopment). You can easely acces the web interface at:
+If you want to use the "forgot password" feature, the email with the link to restore your password will be sent to MailDev (a local mail server for localdevelopment). You can easely acces the web interface at:
 
 `http://localhost:1080/`
 
