@@ -158,7 +158,7 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 
 `cp env-example .env`
 
-2. Open the `.env` file and set the following:
+2. Open the `.env` file of this project (tenejob-laravel-api) and set the following:
 
 > DB_CONNECTION=mysql  
 > DB_HOST=mysql  
