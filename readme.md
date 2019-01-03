@@ -175,11 +175,11 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 > MAIL_PASSWORD=null  
 > MAIL_ENCRYPTION=null  
 
-3. Build an run the containers:
+3. Execute the following command inside the `laradock` folder, to build an run the containers:
 
 `docker-compose up -d nginx mysql workspace maildev`
 
-4. Access to the MySQL Command-line Client inside the `mysql` container:
+4. Execute the following command inside the `laradock` folder, to get access to the MySQL Command-line Client inside the `mysql` container:
 
 `docker-compose exec mysql mysql -u root -proot`
 
