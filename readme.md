@@ -238,7 +238,7 @@ Read the API documentation through the Swagger web interface at:
 
 ### Maildev
 
-If you want to use the "forgot password" feature, the email with the link to restore your password will be sent to MailDev (a local mail server for localdevelopment). You can easely acces the web interface at:
+If you want to use the "forgot password" feature, the email with the link to restore your password will be sent to MailDev (a local mail server for local development). You can easely acces the web interface at:
 
 `http://localhost:1080/`
 
