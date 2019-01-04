@@ -131,7 +131,7 @@ Structure example of the JSON data that the `/api/matchings/auto-generate` endpo
 
 The `/api/matchings/auto-generate` endpoint will validate the data sent through POST.
 
-One of the validations to be considered first is that all the `shifts` and `workers` should already exist on the DB. The endpoint will validate that each ID of `shifts` and `workers` exists on the DB and, also will check the data of each `shift` and `worker` against the one stored on the DB. The endpoint will also return verbose error messages if invalid data is sent. So consider login trough the web interface and puto some data for your testing purposes.The `/api/matchings/auto-generate` endpoint will validate the data sent through POST. One of the validations to be considered first is that all the `shifts` and `workers` should already exist on the DB. The endpoint will validate that each ID of `shifts` and `workers` exists on the DB and, it will also compare the data of each `shift` and `worker` against the each ones stored on the DB. The endpoint will also return verbose error messages if invalid data is sent. So consider login trough the web interface and puto some data for your testing purposes.
+One of the validations to be considered first of all is that all the `shifts` and `workers` should already exist on the DB. The endpoint will validate that each ID of `shifts` and `workers` exists on the DB and, it will also compare the data of each `shift` and `worker` against the each ones stored on the DB. The endpoint will also return verbose error messages if invalid data is sent. So, consider login trough the web interface and put some data for your testing purposes.
 
 ----------
 
