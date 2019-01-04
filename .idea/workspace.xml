@@ -615,14 +615,7 @@
       <workItem from="1546271397275" duration="141000" />
       <workItem from="1546564754076" duration="702000" />
       <workItem from="1546567946324" duration="1980000" />
-      <workItem from="1546570032791" duration="1004000" />
-    </task>
-    <task id="LOCAL-00016" summary="The non essential UI elements have been removed on the internal admin panel.">
-      <created>1546006313923</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1546006313924</updated>
+      <workItem from="1546570032791" duration="1043000" />
     </task>
     <task id="LOCAL-00017" summary="A namespace have been added to the controller.">
       <created>1546006346340</created>
@@ -960,11 +953,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546570938522</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary=".idea IDE workspace.xml file.">
+      <created>1546571089295</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1546571089296</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185700000" />
+    <option name="totallyTimeSpent" value="185739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -1025,7 +1025,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="Hamburger menu to show the menu on mobile view." />
     <MESSAGE value="Toggle functionality." />
     <MESSAGE value="Point the logo link to the &quot;/home&quot; path." />
     <MESSAGE value="ID included in the table view of the &quot;Day&quot; listing table (to follow the same patter as in other listing tables)." />
@@ -1050,7 +1049,8 @@
     <MESSAGE value="New variable `MAIL_WEB_INTERFACE_URL`." />
     <MESSAGE value="The link for the mail server web interface is now fulfilled with the environment variable value." />
     <MESSAGE value="Improvements and further explanations on some of the sections already described in the document." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements and further explanations on some of the sections already described in the document." />
+    <MESSAGE value=".idea IDE workspace.xml file." />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea IDE workspace.xml file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
