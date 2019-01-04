@@ -102,9 +102,9 @@
                 </div>
             </div>
             <footer class="links">
-                <a href="{{ url('/') }}:1080/" target="_blank">
+                <a href="{{ env('MAIL_WEB_INTERFACE_URL') }}" target="_blank">
                     <i class="fas fa-envelope"></i>&nbsp;
-                    MailDev
+                    Mail Web Interface
                 </a>
                 <a href="/api/docs" target="_blank">
                     <i class="fas fa-book"></i>&nbsp;
