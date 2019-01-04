@@ -4,20 +4,21 @@ TeneJob Laravel API Demo
 
 Table of contents:
 
-- [TeneJob Laravel API Demo](#oowordpressnonces)
+- [TeneJob Laravel API Demo](#tenejob-laravel-api-demo)
   * [Disclaimer](#disclaimer)
   * [Introduction](#introduction)
     + [Problem domain](#problem-domain)
     + [Solution](#solution)
     + [Implementation requirements](#implementation-requirements)
     + [Data input example](#data-input-example)
+    + [Data input validations](#data-input-validations)
   * [Local development](#local-development)
     + [Requirements](#requirements)
     + [Get a copy of the project](#get-a-copy-of-the-project)
-    + [Setup the Docker environment, Laradock](#setup-the-docker-environment-laradock)
+    + [Setup the Docker environment, Laradock](#setup-the-docker-environment,-laradock)
     + [Laravel initial setup](#laravel-initial-setup)
     + [Read the API documentation](#read-the-api-documentation)
-    + [MailDev](#maildev)
+    + [MailDev or Mailtrap email server](#maildev-or-mailtrap-email-server)
     + [Run the Tests](#run-the-tests)
   * [Laradock errors](#laradock-errors)
     + [Main problems I faced installing Laradock](main-problems-i-faced-installing-laradock)
@@ -126,6 +127,12 @@ Structure example of the JSON data that the `/api/matchings/auto-generate` endpo
 }
 ```
 
+### Data input validations
+
+The `/api/matchings/auto-generate` endpoint will validate the data sent through POST.
+
+One of the validations to be considered first is that all the `shifts` and `workers` should already exist on the DB. The endpoint will validate that each ID of `shifts` and `workers` exists on the DB and, also will check the data of each `shift` and `worker` against the one stored on the DB. The endpoint will also return verbose error messages if invalid data is sent. So consider login trough the web interface and puto some data for your testing purposes.The `/api/matchings/auto-generate` endpoint will validate the data sent through POST. One of the validations to be considered first is that all the `shifts` and `workers` should already exist on the DB. The endpoint will validate that each ID of `shifts` and `workers` exists on the DB and, it will also compare the data of each `shift` and `worker` against the each ones stored on the DB. The endpoint will also return verbose error messages if invalid data is sent. So consider login trough the web interface and puto some data for your testing purposes.
+
 ----------
 
 ## Local development
@@ -154,7 +161,7 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 
 ### Setup the Docker environment, Laradock
 
-1. Enter the laradock folder and rename env-example to .env.
+1. Enter the `/laradock` folder and rename env-example to .env.
 
 `cp env-example .env`
 
@@ -236,11 +243,19 @@ Read the API documentation through the Swagger web interface at:
 
 ----------
 
-### Maildev
+### Maildev or Mailtrap email server
 
-If you want to use the "forgot password" feature, the email with the link to restore your password will be sent to MailDev (a local mail server for local development). You can easely acces the web interface at:
+If you want to use the "forgot password" feature…
+
+On your local development environment with Laradock:  
+the email with the link to restore your password will be sent to MailDev (a local mail server for local development). You can easely access the web interface at:
 
 `http://localhost:1080/`
+
+On the Heroku App testing page:
+the email with the link to restore your password will be sent to Mailtrap Heroku Add-on (a local mail server for testing purposes). You can easely access the web interface at:
+
+`https://heroku.mailtrap.io/inboxes/520364/messages`
 
 ----------
 
