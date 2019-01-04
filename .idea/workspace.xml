@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d23a7807-9709-40d5-a74e-589ef2dea551" name="Default" comment="" />
+    <list default="true" id="d23a7807-9709-40d5-a74e-589ef2dea551" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +15,48 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+              <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppServiceProvider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="396">
+                <caret line="131" column="10" lean-forward="false" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
+                <folding>
+                  <marker date="1546570882046" expanded="true" signature="4289:4947" ph="{...}" />
+                  <marker date="1546570882046" expanded="true" signature="4304:4713" ph="[...]" />
+                  <marker date="1546570882046" expanded="true" signature="4310:4401" ph="{&quot;id&quot;: 1...}" />
+                  <marker date="1546570882046" expanded="true" signature="4407:4508" ph="{&quot;id&quot;: 2...}" />
+                  <marker date="1546570882046" expanded="true" signature="4514:4603" ph="{&quot;id&quot;: 3...}" />
+                  <marker date="1546570882046" expanded="true" signature="4609:4709" ph="{&quot;id&quot;: 4...}" />
+                  <marker date="1546570882046" expanded="true" signature="4727:4945" ph="[...]" />
+                  <marker date="1546570882046" expanded="true" signature="4733:4779" ph="{&quot;id&quot;: 1...}" />
+                  <marker date="1546570882046" expanded="true" signature="4785:4832" ph="{&quot;id&quot;: 2...}" />
+                  <marker date="1546570882046" expanded="true" signature="4838:4887" ph="{&quot;id&quot;: 3...}" />
+                  <marker date="1546570882046" expanded="true" signature="4893:4941" ph="{&quot;id&quot;: 4...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -34,12 +71,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="104" column="21" lean-forward="false" selection-start-line="104" selection-start-column="21" selection-end-line="107" selection-end-column="20" />
+              <folding>
+                <marker date="1546570307385" expanded="true" signature="30:73" ph="..." />
+                <marker date="1546570307385" expanded="true" signature="6159:6178" ph="..." />
+                <marker date="1546570307385" expanded="true" signature="6249:6263" ph="..." />
+                <marker date="1546570307385" expanded="true" signature="6345:6361" ph="..." />
+                <marker date="1546570307385" expanded="true" signature="6409:6431" ph="..." />
+                <marker date="1546570307385" expanded="true" signature="6476:6495" ph="..." />
+                <marker date="1546570307385" expanded="true" signature="6711:6742" ph="..." />
+                <marker date="1546570307385" expanded="true" signature="6711:7308" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$relations</find>
-      <find>deleted_at</find>
       <find>matchings.deleted_at</find>
       <find>deleted</find>
       <find>soft</find>
@@ -68,6 +122,8 @@
       <find>worker_ids</find>
       <find>dump</find>
       <find>createOptimalMatchings</find>
+      <find>.env</find>
+      <find>maildev</find>
     </findStrings>
     <replaceStrings>
       <replace>fa-circle</replace>
@@ -80,9 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/WorkerAPIController.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/MatchingsAPIController.php" />
         <option value="$PROJECT_DIR$/resources/views/days/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
@@ -131,6 +184,9 @@
         <option value="$PROJECT_DIR$/app/Repositories/MatchingRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/MatchingAPIController.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -272,6 +328,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -403,8 +461,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -557,27 +613,9 @@
       <workItem from="1546267169609" duration="1782000" />
       <workItem from="1546269000630" duration="1963000" />
       <workItem from="1546271397275" duration="141000" />
-    </task>
-    <task id="LOCAL-00013" summary="Small fixes on the schema files.">
-      <created>1545908364711</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1545908364712</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Updates after running the &quot;composer update&quot; command.">
-      <created>1545908546381</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1545908546381</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Configuration file of the InfyOm Generator package published into the &quot;config&quot; folder of the project.">
-      <created>1545911422982</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1545911422982</updated>
+      <workItem from="1546564754076" duration="702000" />
+      <workItem from="1546567946324" duration="1980000" />
+      <workItem from="1546570032791" duration="1004000" />
     </task>
     <task id="LOCAL-00016" summary="The non essential UI elements have been removed on the internal admin panel.">
       <created>1546006313923</created>
@@ -901,21 +939,42 @@
       <option name="project" value="LOCAL" />
       <updated>1546270301409</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="New variable `MAIL_WEB_INTERFACE_URL`.">
+      <created>1546570395124</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1546570395125</updated>
+    </task>
+    <task id="LOCAL-00063" summary="The link for the mail server web interface is now fulfilled with the environment variable value.">
+      <created>1546570533537</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1546570533537</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Improvements and further explanations on some of the sections already described in the document.">
+      <created>1546570938522</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1546570938522</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182014000" />
+    <option name="totallyTimeSpent" value="185700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22622478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2334294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5614754" sideWeight="0.50864553" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4385246" sideWeight="0.49135447" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4385246" sideWeight="0.49135447" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25864553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -966,9 +1025,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="Better info on the menu and, more accessible button to log out" />
-    <MESSAGE value="Now, the buttons for &quot;View&quot;, &quot;Edit&quot; and, &quot;Delete&quot; on the CRUDs have labels close to the icon to improve the UX." />
-    <MESSAGE value="Bugfix" />
     <MESSAGE value="Hamburger menu to show the menu on mobile view." />
     <MESSAGE value="Toggle functionality." />
     <MESSAGE value="Point the logo link to the &quot;/home&quot; path." />
@@ -991,34 +1047,16 @@
     <MESSAGE value="Package with retro-compatibility for testing using deprecated methods of previous Laravel versions." />
     <MESSAGE value="The new composer.lock file, after installing a new composer package dependence for development." />
     <MESSAGE value="All test files with the `Tests` namespace. But more work needs to be done in order to pass the tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="All test files with the `Tests` namespace. But more work needs to be done in order to pass the tests." />
+    <MESSAGE value="New variable `MAIL_WEB_INTERFACE_URL`." />
+    <MESSAGE value="The link for the mail server web interface is now fulfilled with the environment variable value." />
+    <MESSAGE value="Improvements and further explanations on some of the sections already described in the document." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements and further explanations on some of the sections already described in the document." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/infyom/laravel_generator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/traits/MakeMatchingTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/traits/MakeShiftTrait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1317,7 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="968">
           <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1332,13 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="758" column="0" lean-forward="true" selection-start-line="758" selection-start-column="0" selection-end-line="758" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#95#0#PHP" expanded="false" />
-            <element signature="e#15635#15936#0#PHP" expanded="false" />
-            <element signature="e#16693#17060#0#PHP" expanded="false" />
-            <element signature="e#17918#18271#0#PHP" expanded="false" />
-            <element signature="e#23782#25217#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1360,8 +1390,56 @@
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="104" column="21" lean-forward="false" selection-start-line="104" selection-start-column="21" selection-end-line="107" selection-end-column="20" />
+          <folding>
+            <marker date="1546570307385" expanded="true" signature="30:73" ph="..." />
+            <marker date="1546570307385" expanded="true" signature="6159:6178" ph="..." />
+            <marker date="1546570307385" expanded="true" signature="6249:6263" ph="..." />
+            <marker date="1546570307385" expanded="true" signature="6345:6361" ph="..." />
+            <marker date="1546570307385" expanded="true" signature="6409:6431" ph="..." />
+            <marker date="1546570307385" expanded="true" signature="6476:6495" ph="..." />
+            <marker date="1546570307385" expanded="true" signature="6711:6742" ph="..." />
+            <marker date="1546570307385" expanded="true" signature="6711:7308" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="396">
+            <caret line="131" column="10" lean-forward="false" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
+            <folding>
+              <marker date="1546570882046" expanded="true" signature="4289:4947" ph="{...}" />
+              <marker date="1546570882046" expanded="true" signature="4304:4713" ph="[...]" />
+              <marker date="1546570882046" expanded="true" signature="4310:4401" ph="{&quot;id&quot;: 1...}" />
+              <marker date="1546570882046" expanded="true" signature="4407:4508" ph="{&quot;id&quot;: 2...}" />
+              <marker date="1546570882046" expanded="true" signature="4514:4603" ph="{&quot;id&quot;: 3...}" />
+              <marker date="1546570882046" expanded="true" signature="4609:4709" ph="{&quot;id&quot;: 4...}" />
+              <marker date="1546570882046" expanded="true" signature="4727:4945" ph="[...]" />
+              <marker date="1546570882046" expanded="true" signature="4733:4779" ph="{&quot;id&quot;: 1...}" />
+              <marker date="1546570882046" expanded="true" signature="4785:4832" ph="{&quot;id&quot;: 2...}" />
+              <marker date="1546570882046" expanded="true" signature="4838:4887" ph="{&quot;id&quot;: 3...}" />
+              <marker date="1546570882046" expanded="true" signature="4893:4941" ph="{&quot;id&quot;: 4...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
