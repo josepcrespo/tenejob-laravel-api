@@ -13,7 +13,7 @@
     @foreach($matchings as $matching)
         <tr>
             <td>{{ $matching->id }}</td>
-            <td>{{ $matching->shift->id }}</td>
+            <td>{{ $matching->shift ? $matching->shift->id : '' }}</td>
             <td>
                 @if($matching->shift && count($matching->shift->days))
                     @foreach ($matching->shift->days as $day)
