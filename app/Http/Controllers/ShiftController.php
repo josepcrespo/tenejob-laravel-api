@@ -164,7 +164,7 @@ class ShiftController extends AppBaseController
     }
 
     /**
-     * Initialize the `shifts` table.
+     * Reset the `shifts` table.
      */
     public function truncateTable() {
         Shift::query()->truncate();

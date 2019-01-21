@@ -164,7 +164,7 @@ class WorkerController extends AppBaseController
     }
 
     /**
-     * Initialize the `worker` table.
+     * Reset the `worker` table.
      */
     public function truncateTable() {
         Worker::query()->truncate();

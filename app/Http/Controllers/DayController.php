@@ -9,6 +9,7 @@ use App\Repositories\DayRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\DB;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -155,10 +156,10 @@ class DayController extends AppBaseController
     }
 
     /**
-     * Initialize the `days` table.
+     * Reset the `days` table.
      */
     public function truncateTable() {
-        Day::query()->truncate();
+        DB::table(Day::getTable())->truncate();
 
         Flash::success('The table for the `Days` has been reset successfully.');
 

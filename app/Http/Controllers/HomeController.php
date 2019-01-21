@@ -31,7 +31,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Initialize the DB tables for
+     * Reset the DB tables for
      * `days`, `shifts`, `workers` and, `matchings`.
      */
     public function truncateTable() {

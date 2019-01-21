@@ -11,6 +11,7 @@ use App\Repositories\MatchingRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\DB;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -169,10 +170,10 @@ class MatchingController extends AppBaseController
     }
 
     /**
-     * Initialize the `matchings` table.
+     * Reset the `matchings` table.
      */
     public function truncateTable() {
-        Matching::query()->truncate();
+        DB::table(Matching::getTable())->truncate();
 
         Flash::success('The table for the `Matchings` has been reset successfully.');
 
