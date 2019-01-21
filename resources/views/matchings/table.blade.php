@@ -13,7 +13,7 @@
     @foreach($matchings as $matching)
         <tr>
             <td>{{ $matching->id }}</td>
-            <td>{{ $matching->shift->id }}</td>
+            <td>{{ $matching->shift ? $matching->shift->id : 'shift deleted'}}</td>
             <td>
                 @if($matching->shift && count($matching->shift->days))
                     @foreach ($matching->shift->days as $day)
@@ -21,8 +21,8 @@
                     @endforeach
                 @endif
             </td>
-            <td>{{ $matching->worker->id }}</td>
-            <td>{{ $matching->worker->payrate }}</td>
+            <td>{{ $matching->worker ? $matching->worker->id : 'worker deleted'}}</td>
+            <td>{{ $matching->worker ? $matching->worker->payrate : '' }}</td>
             <td>
                 {!! Form::open(['route' => ['matchings.destroy', $matching->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
