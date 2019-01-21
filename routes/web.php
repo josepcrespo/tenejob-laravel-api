@@ -27,3 +27,8 @@ Route::resource('shifts', 'ShiftController');
 Route::resource('workers', 'WorkerController');
 
 Route::resource('matchings', 'MatchingController');
+
+Route::delete(
+    '/matchings/truncate',
+    'MatchingController@truncateTable'
+)->name('matchings.truncate');

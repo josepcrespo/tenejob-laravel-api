@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateDayRequest;
 use App\Http\Requests\UpdateDayRequest;
+use App\Models\Day;
 use App\Repositories\DayRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -149,6 +150,17 @@ class DayController extends AppBaseController
         $this->dayRepository->delete($id);
 
         Flash::success('Day deleted successfully.');
+
+        return redirect(route('days.index'));
+    }
+
+    /**
+     *
+     */
+    public function truncateTable() {
+        Day::truncate();
+
+        Flash::success('The table for the `days` has been initialized successfully.');
 
         return redirect(route('days.index'));
     }
