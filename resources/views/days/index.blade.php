@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1 class="pull-left">Days</h1>
-        {!! Form::open(['route' => ['days.truncate'], 'method' => 'delete']) !!}
+        {!! Form::open(['route' => ['days.delete.all'], 'method' => 'delete']) !!}
         {!! Form::button(
             'Reset table', [
                 'type'    => 'submit',

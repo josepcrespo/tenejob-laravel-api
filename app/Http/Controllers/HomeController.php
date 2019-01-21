@@ -34,11 +34,11 @@ class HomeController extends Controller
      * Reset the DB tables for
      * `days`, `shifts`, `workers` and, `matchings`.
      */
-    public function truncateTable() {
-        Matching::query()->truncate();
-        Worker::query()->truncate();
-        Shift::query()->truncate();
-        Day::query()->truncate();
+    public function resetTable() {
+        Matching::query()->delete();
+        Worker::query()->delete();
+        Shift::query()->delete();
+        Day::query()->delete();
 
         Flash::success('The tables for the `Days`, `Shifts`, `Workers` and, `Matchings` have been reset successfully.');
 

@@ -166,8 +166,8 @@ class WorkerController extends AppBaseController
     /**
      * Reset the `worker` table.
      */
-    public function truncateTable() {
-        Worker::query()->truncate();
+    public function resetTable() {
+        Worker::query()->delete();
 
         Flash::success('The table for the `Workers` has been reset successfully.');
 

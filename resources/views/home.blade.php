@@ -14,7 +14,7 @@
 				You can also start with a fresh DB. To do this, click the reset button:
 			</p>
 			{!! Form::open([
-					'route'  => ['home.truncate'],
+					'route'  => ['home.delete.all'],
 					'method' => 'delete',
 					'style'  => 'text-align: center;'
 				])

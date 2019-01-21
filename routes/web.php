@@ -22,34 +22,34 @@ Route::get('/home', 'HomeController@index')
     ->name('home');
 
 Route::delete(
-    '/home/truncate',
-    'HomeController@truncateTable'
-)->name('home.truncate');
+    '/home/delete/all',
+    'HomeController@resetTable'
+)->name('home.delete.all');
 
 Route::resource('days', 'DayController');
 
 Route::delete(
-    '/days/truncate',
-    'DayController@truncateTable'
-)->name('days.truncate');
+    '/days/delete/all',
+    'DayController@resetTable'
+)->name('days.delete.all');
 
 Route::resource('shifts', 'ShiftController');
 
 Route::delete(
-    '/shifts/truncate',
-    'ShiftController@truncateTable'
-)->name('shifts.truncate');
+    '/shifts/delete/all',
+    'ShiftController@resetTable'
+)->name('shifts.delete.all');
 
 Route::resource('workers', 'WorkerController');
 
 Route::delete(
-    '/workers/truncate',
-    'WorkerController@truncateTable'
-)->name('workers.truncate');
+    '/workers/delete/all',
+    'WorkerController@resetTable'
+)->name('workers.delete.all');
 
 Route::resource('matchings', 'MatchingController');
 
 Route::delete(
-    '/matchings/truncate',
-    'MatchingController@truncateTable'
-)->name('matchings.truncate');
+    '/matchings/delete/all',
+    'MatchingController@resetTable'
+)->name('matchings.delete.all');
