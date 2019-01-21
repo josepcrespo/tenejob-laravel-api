@@ -5,7 +5,7 @@
         <h1 class="pull-left">Workers</h1>
         {!! Form::open(['route' => ['workers.truncate'], 'method' => 'delete']) !!}
         {!! Form::button(
-            'Reset Workers table', [
+            'Reset table', [
                 'type'    => 'submit',
                 'class'   => 'btn btn-danger pull-right',
                 'onclick' => "return confirm('Are you sure?')",

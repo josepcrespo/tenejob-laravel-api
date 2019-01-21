@@ -172,7 +172,7 @@ class MatchingController extends AppBaseController
      * Initialize the `matchings` table.
      */
     public function truncateTable() {
-        Matching::truncate();
+        Matching::query()->truncate();
 
         Flash::success('The table for the `Matchings` has been reset successfully.');
 

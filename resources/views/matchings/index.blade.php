@@ -5,7 +5,7 @@
         <h1 class="pull-left">Matchings</h1>
         {!! Form::open(['route' => ['matchings.truncate'], 'method' => 'delete']) !!}
         {!! Form::button(
-            'Reset Matchings table', [
+            'Reset table', [
                 'type'    => 'submit',
                 'class'   => 'btn btn-danger pull-right',
                 'onclick' => "return confirm('Are you sure?')",

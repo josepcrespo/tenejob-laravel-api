@@ -167,7 +167,7 @@ class ShiftController extends AppBaseController
      * Initialize the `shifts` table.
      */
     public function truncateTable() {
-        Shift::truncate();
+        Shift::query()->truncate();
 
         Flash::success('The table for the `Shifts` has been reset successfully.');
 

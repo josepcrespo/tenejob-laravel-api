@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateWorkerRequest;
 use App\Http\Requests\UpdateWorkerRequest;
 use App\Models\Day;
+use App\Models\Worker;
 use App\Repositories\WorkerRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -166,7 +167,7 @@ class WorkerController extends AppBaseController
      * Initialize the `worker` table.
      */
     public function truncateTable() {
-        Worker::truncate();
+        Worker::query()->truncate();
 
         Flash::success('The table for the `Workers` has been reset successfully.');
 

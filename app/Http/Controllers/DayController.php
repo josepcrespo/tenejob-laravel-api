@@ -158,7 +158,7 @@ class DayController extends AppBaseController
      * Initialize the `days` table.
      */
     public function truncateTable() {
-        Day::truncate();
+        Day::query()->truncate();
 
         Flash::success('The table for the `Days` has been reset successfully.');
 
