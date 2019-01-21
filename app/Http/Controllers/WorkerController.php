@@ -161,4 +161,15 @@ class WorkerController extends AppBaseController
 
         return redirect(route('workers.index'));
     }
+
+    /**
+     * Initialize the `worker` table.
+     */
+    public function truncateTable() {
+        Worker::truncate();
+
+        Flash::success('The table for the `Workers` has been reset successfully.');
+
+        return redirect(route('workers.index'));
+    }
 }

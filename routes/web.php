@@ -18,13 +18,34 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')
+    ->name('home');
+
+Route::delete(
+    '/home/truncate',
+    'HomeController@truncateTable'
+)->name('home.truncate');
 
 Route::resource('days', 'DayController');
 
+Route::delete(
+    '/days/truncate',
+    'DayController@truncateTable'
+)->name('days.truncate');
+
 Route::resource('shifts', 'ShiftController');
 
+Route::delete(
+    '/shifts/truncate',
+    'ShiftController@truncateTable'
+)->name('shifts.truncate');
+
 Route::resource('workers', 'WorkerController');
+
+Route::delete(
+    '/workers/truncate',
+    'WorkerController@truncateTable'
+)->name('workers.truncate');
 
 Route::resource('matchings', 'MatchingController');
 

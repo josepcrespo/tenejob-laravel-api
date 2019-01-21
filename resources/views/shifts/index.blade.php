@@ -3,11 +3,23 @@
 @section('content')
     <section class="content-header">
         <h1 class="pull-left">Shifts</h1>
+        {!! Form::open(['route' => ['shifts.truncate'], 'method' => 'delete']) !!}
+        {!! Form::button(
+            'Reset Shifts table', [
+                'type'    => 'submit',
+                'class'   => 'btn btn-danger pull-right',
+                'onclick' => "return confirm('Are you sure?')",
+                'style'   => 'position: relative; top: -10px; margin-left: 10px;'
+            ]
+        ) !!}
+        {!! Form::close() !!}
         <h1 class="pull-right">
            <a class="btn btn-primary pull-right"
               style="margin-top: -10px; margin-bottom: 5px;"
               href="{!! route('shifts.create') !!}"
-           >Add New</a>
+           >
+               Add New
+           </a>
         </h1>
     </section>
     <div class="content">

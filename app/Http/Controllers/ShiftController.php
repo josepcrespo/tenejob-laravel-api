@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateShiftRequest;
 use App\Http\Requests\UpdateShiftRequest;
 use App\Models\Day;
+use App\Models\Shift;
 use App\Repositories\ShiftRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -158,6 +159,17 @@ class ShiftController extends AppBaseController
         $this->shiftRepository->delete($id);
 
         Flash::success('Shift deleted successfully.');
+
+        return redirect(route('shifts.index'));
+    }
+
+    /**
+     * Initialize the `shifts` table.
+     */
+    public function truncateTable() {
+        Shift::truncate();
+
+        Flash::success('The table for the `Shifts` has been reset successfully.');
 
         return redirect(route('shifts.index'));
     }

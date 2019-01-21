@@ -3,17 +3,22 @@
 @section('content')
     <section class="content-header">
         <h1 class="pull-left">Matchings</h1>
+        {!! Form::open(['route' => ['matchings.truncate'], 'method' => 'delete']) !!}
+        {!! Form::button(
+            'Reset Matchings table', [
+                'type'    => 'submit',
+                'class'   => 'btn btn-danger pull-right',
+                'onclick' => "return confirm('Are you sure?')",
+                'style'   => 'position: relative; top: -10px; margin-left: 10px;'
+            ]
+        ) !!}
+        {!! Form::close() !!}
         <h1 class="pull-right">
-            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('matchings.create') !!}">Add New</a>
-            {!! Form::open(['route' => ['matchings.truncate'], 'method' => 'post']) !!}
-                {!! Form::button(
-                    '<i class="glyphicon glyphicon-trash"></i>', [
-                        'type'    => 'submit',
-                        'class'   => 'btn btn-danger',
-                        'onclick' => "return confirm('Are you sure?')"
-                    ]
-                ) !!}
-            {!! Form::close() !!}
+            <a class="btn btn-primary pull-right"
+               style="margin-top: -10px;margin-bottom: 5px"
+               href="{!! route('matchings.create') !!}">
+                Add New
+            </a>
         </h1>
     </section>
     <div class="content">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateMatchingRequest;
 use App\Http\Requests\UpdateMatchingRequest;
+use App\Models\Matching;
 use App\Models\Shift;
 use App\Models\Worker;
 use App\Repositories\MatchingRepository;
@@ -163,6 +164,17 @@ class MatchingController extends AppBaseController
         $this->matchingRepository->delete($id);
 
         Flash::success('Matching deleted successfully.');
+
+        return redirect(route('matchings.index'));
+    }
+
+    /**
+     * Initialize the `matchings` table.
+     */
+    public function truncateTable() {
+        Matching::truncate();
+
+        Flash::success('The table for the `Matchings` has been reset successfully.');
 
         return redirect(route('matchings.index'));
     }

@@ -3,6 +3,16 @@
 @section('content')
     <section class="content-header">
         <h1 class="pull-left">Workers</h1>
+        {!! Form::open(['route' => ['workers.truncate'], 'method' => 'delete']) !!}
+        {!! Form::button(
+            'Reset Workers table', [
+                'type'    => 'submit',
+                'class'   => 'btn btn-danger pull-right',
+                'onclick' => "return confirm('Are you sure?')",
+                'style'   => 'position: relative; top: -10px; margin-left: 10px;'
+            ]
+        ) !!}
+        {!! Form::close() !!}
         <h1 class="pull-right">
            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('workers.create') !!}">Add New</a>
         </h1>
