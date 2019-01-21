@@ -48,7 +48,7 @@
         <header class="main-header">
             <!-- Logo -->
             <a href="{{ url('/') }}/home" class="logo">
-                <b>TeneJob</b>
+                <b>TeneJob Admin</b>
             </a>
 
             <!-- Header Navbar -->
