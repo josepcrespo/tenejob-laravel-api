@@ -7,6 +7,7 @@ use App\Models\Matching;
 use App\Models\Shift;
 use App\Models\Worker;
 use Illuminate\Http\Request;
+use Laracasts\Flash\Flash;
 
 class HomeController extends Controller
 {
