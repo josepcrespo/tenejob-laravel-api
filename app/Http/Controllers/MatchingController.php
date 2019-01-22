@@ -22,6 +22,7 @@ class MatchingController extends AppBaseController
     public function __construct(MatchingRepository $matchingRepo)
     {
         $this->matchingRepository = $matchingRepo;
+        $this->middleware('auth');
     }
 
     /**

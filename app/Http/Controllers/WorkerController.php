@@ -21,6 +21,7 @@ class WorkerController extends AppBaseController
     public function __construct(WorkerRepository $workerRepo)
     {
         $this->workerRepository = $workerRepo;
+        $this->middleware('auth');
     }
 
     /**

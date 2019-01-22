@@ -20,6 +20,7 @@ class DayController extends AppBaseController
     public function __construct(DayRepository $dayRepo)
     {
         $this->dayRepository = $dayRepo;
+        $this->middleware('auth');
     }
 
     /**

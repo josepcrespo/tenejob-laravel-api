@@ -21,6 +21,7 @@ class ShiftController extends AppBaseController
     public function __construct(ShiftRepository $shiftRepo)
     {
         $this->shiftRepository = $shiftRepo;
+        $this->middleware('auth');
     }
 
     /**
