@@ -409,7 +409,7 @@
                 "tags": [
                     "Matching"
                 ],
-                "summary": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`",
+                "summary": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
                 "description": "Drop the current `matchings` and automatically generates new ones.",
                 "produces": [
                     "application/json"
@@ -421,7 +421,72 @@
                         "description": "A collection of shifts and, a collection of workers",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/Matching"
+                            "properties": {
+                                "workers": {
+                                    "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "availability": {
+                                                "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "items": {
+                                                        "type": "string",
+                                                        "enum": "[\n     *                                  Monday,\n     *                                  Tuesday,\n     *                                  Wednesday,\n     *                                  Thursday,\n     *                                  Friday,\n     *                                  Saturday,\n     *                                  Sunday\n     *                              ]"
+                                                    }
+                                                },
+                                                "maxItems": 7,
+                                                "minItems": 1,
+                                                "uniqueItems": true,
+                                                "example": [
+                                                    "Monday",
+                                                    "Wednesday"
+                                                ]
+                                            },
+                                            "payrate": {
+                                                "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                                "type": "number",
+                                                "example": "7.50"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "shifts": {
+                                    "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "day": {
+                                                "description": "Generates a new set of `matchings` after receiving input data of `shifts` and `workers`.",
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "maxItems": 1,
+                                                "minItems": 1,
+                                                "uniqueItems": true,
+                                                "example": [
+                                                    "Monday"
+                                                ]
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
                         }
                     }
                 ],

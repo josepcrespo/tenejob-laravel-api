@@ -705,7 +705,50 @@ class MatchingAPIController extends AppBaseController
      *          in="body",
      *          description="A collection of shifts and, a collection of workers",
      *          required=true,
-     *          @SWG\Schema(ref="#/definitions/Matching")
+     *          @SWG\Schema(
+     *              @SWG\Property(property="workers", type="array",  @SWG\Items(
+     *                      type="object",
+     *                      @SWG\Property(property="id", type="integer", example="1"),
+     *                      @SWG\Property(
+     *                          property="availability",
+     *                          type="array",
+     *                          example={"Monday","Wednesday"},
+     *                          minItems=1,
+     *                          maxItems=7,
+     *                          uniqueItems=true,
+     *                          @SWG\Items(
+     *                              type="string",
+     *                              @SWG\Items(type="string", enum="[
+     *                                  Monday,
+     *                                  Tuesday,
+     *                                  Wednesday,
+     *                                  Thursday,
+     *                                  Friday,
+     *                                  Saturday,
+     *                                  Sunday
+     *                              ]")
+     *                          )
+     *                      ),
+     *                      @SWG\Property(property="payrate", type="number", example="7.50")
+     *                  )
+     *              ),
+     *              @SWG\Property(property="shifts", type="array",  @SWG\Items(
+     *                      type="object",
+     *                      @SWG\Property(property="id", type="integer", example="1"),
+     *                      @SWG\Property(
+     *                          property="day",
+     *                          type="array",
+     *                          example={"Monday"},
+     *                          minItems=1,
+     *                          maxItems=1,
+     *                          uniqueItems=true,
+     *                          @SWG\Items(
+     *                              type="string"
+     *                          )
+     *                      )
+     *                  )
+     *              )
+     *          )
      *      ),
      *      @SWG\Response(
      *          response=200,
