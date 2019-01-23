@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d23a7807-9709-40d5-a74e-589ef2dea551" name="Default" comment="Merge branch 'master' of https://github.com/josepcrespo/tenejob-laravel-api&#10;&#10;# Conflicts:&#10;#&#9;resources/views/matchings/table.blade.php">
-      <change beforePath="$PROJECT_DIR$/resources/views/matchings/table.blade.php" afterPath="$PROJECT_DIR$/resources/views/matchings/table.blade.php" />
+    <list default="true" id="d23a7807-9709-40d5-a74e-589ef2dea551" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,7 +93,7 @@
       <file leaf-file-name="table.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/matchings/table.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="168">
               <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
               <folding>
                 <marker date="1548265761130" expanded="true" signature="329:352" ph="..." />
@@ -628,13 +628,6 @@
       <workItem from="1548263031021" duration="1787000" />
       <workItem from="1548264908156" duration="307000" />
     </task>
-    <task id="LOCAL-00030" summary="The footer links now opens on a new browser tab.">
-      <created>1546089952178</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1546089952178</updated>
-    </task>
     <task id="LOCAL-00031" summary="CRUD, API and, scaffolding for the &quot;Day&quot; entity.">
       <created>1546100608948</created>
       <option name="number" value="00031" />
@@ -971,19 +964,26 @@
       <option name="project" value="LOCAL" />
       <updated>1548265064591</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Merge branch 'master' of https://github.com/josepcrespo/tenejob-laravel-api&#10;&#10;# Conflicts:&#10;#&#9;resources/views/matchings/table.blade.php">
+      <created>1548266086088</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1548266086089</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210841000" />
+    <option name="totallyTimeSpent" value="211123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5614754" sideWeight="0.50864553" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6639344" sideWeight="0.49135447" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6639344" sideWeight="0.3278098" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6639344" sideWeight="0.6721902" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6666667" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1496,7 +1496,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/matchings/table.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="168">
           <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding>
             <marker date="1548265761130" expanded="true" signature="329:352" ph="..." />
