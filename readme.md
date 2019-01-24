@@ -21,12 +21,26 @@ Table of contents:
   * [Local development](#local-development)
     + [Requirements](#requirements)
     + [Get a copy of the project](#get-a-copy-of-the-project)
-    + [Setup the Docker environment, Laradock](#setup-the-docker-environment,-laradock)
-    + [Possible Laradock installation errors](#possible-laradock-installation-errors)
-    + [Laravel initial setup](#laravel-initial-setup)
-    + [Read the API documentation](#read-the-api-documentation)
-    + [MailDev or Mailtrap email server](#maildev-or-mailtrap-email-server)
+    + [Setup the _Docker_ environment, _Laradock_](#setup-the-_docker_-environment,-_laradock_)
+    + [Possible _Laradock_ installation errors](#possible-_laradock_-installation-errors)
+    + [_Laravel_ initial setup](#_laravel_-initial-setup)
+    + [Read the _API_ documentation](#read-the-_api_-documentation)
+    + [_MailDev_ or _Mailtrap_ email server](#_maildev_-or-_mailtrap_-email-server)
     + [Run the Tests](#run-the-tests)
+  * [Deployment on _Heroku_](#deployment-on-_heroku_)
+    + [Install the _Heroku CLI_](#install-the-_heroku-cli_)
+    + [Initializing a _Git_ repository](#initializing-a-_git_-repository)
+    + [Creating a _Procfile_](#creating-a-_procfile_)
+    + [Creating a new application on _Heroku_](#creating-a-new-application-on-_heroku_)
+    + [Setting a _Laravel_ encryption key](#setting-a-_laravel_-encryption-key)
+    + [Pushing to _Heroku_](#pushing-to-_heroku_)
+    + [Provision your _Heroku_ instance with a compatible _MySQL_ add-on](#provision-your-_heroku_-instance-with-a-compatible-_mysql_-add-on)
+    + [Run the _Laravel_ migrations](#run-the-_laravel_-migrations)
+    + [Open your shiny app deployed on _Heroku_](#open-your-shiny-app-deployed-on-_heroku_)
+  * [Bibliography](#bibliography)
+    + [_Heroku_](#_heroku_)
+    + [Project development tools](#project-development-tools)
+    
 
 ----------
 
@@ -85,7 +99,7 @@ This project demo focuses on:
 
 ### Data input example
 
-Structure example of the JSON data that the `/api/matchings/auto-generate` endpoint will expect:
+Structure example of the _JSON_ data that the `/api/matchings/auto-generate` endpoint will expect:
 
 ```javascript
 {
@@ -132,11 +146,13 @@ Structure example of the JSON data that the `/api/matchings/auto-generate` endpo
 }
 ```
 
+----------
+
 ### Data input validations
 
-The `/api/matchings/auto-generate` endpoint will validate the data sent through POST.
+The `/api/matchings/auto-generate` endpoint will validate the data sent through _POST_.
 
-One of the validations to be considered first of all is that all the `shifts` and `workers` should already exist on the DB. The endpoint will validate that each ID of `shifts` and `workers` exists on the DB and, it will also compare the data of each `shift` and `worker` against the each ones stored on the DB. The endpoint will also return verbose error messages if invalid data is sent. So, consider login trough the web interface and put some data for your testing purposes.
+One of the validations to be considered first of all is that all the `shifts` and `workers` should already exist on the database. The endpoint will validate that each ID of `shifts` and `workers` exists on the DB and, it will also compare the data of each `shift` and `worker` against the each ones stored on the DB. The endpoint will also return verbose error messages if invalid data is sent. So, consider login trough the web interface and put some data for your testing purposes.
 
 ----------
 
@@ -164,13 +180,13 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 
 ----------
 
-### Setup the Docker environment, Laradock
+### Setup the _Docker_ environment, _Laradock_
 
-1. Enter the `/laradock` folder and rename env-example to .env.
+1. Enter the `/laradock` folder and rename _env-example_ to _.env_.
 
 `cp env-example .env`
 
-2. Open the `.env` file of this project (tenejob-laravel-api) and set the following:
+2. Open the `.env` file of this project (_tenejob-laravel-api_) and set the following:
 
 > DB_CONNECTION=mysql  
 > DB_HOST=mysql  
@@ -191,7 +207,7 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 
 `docker-compose up -d nginx mysql workspace maildev`
 
-4. Execute the following command inside the `laradock` folder, to get access to the MySQL Command-line Client inside the `mysql` container:
+4. Execute the following command inside the `laradock` folder, to get access to the _MySQL Command-line Client_ inside the `mysql` container:
 
 `docker-compose exec mysql mysql -u root -proot`
 
@@ -199,7 +215,7 @@ Clone the project (and it's git submodules) using [Git](https://git-scm.com/):
 
 `CREATE DATABASE tenejob;`
 
-6. To install the defined dependencies for your project (don't execute Composer inside the workspace as is not recommended to run it as root), just run the *Composer* install command into the project root directory using the *Terminal.app* (if you are using *macOS*) or with your preferred *Shell*:
+6. To install the defined dependencies for your project (don't execute _Composer_ inside the workspace as is not recommended to run it as root), just run the `composer install` command into the project root directory using the *Terminal.app* (if you are using *macOS*) or with your preferred *Shell*:
 
 `php composer.phar install`
 
@@ -209,11 +225,11 @@ You may want to look into [the official Composer guidelines for Installing Depen
 > `php composer-setup.php --filename=composer`
 > In that case, you should run `composer install` in order to install the dependencies.
 
-7. Laradock introduces the Workspace Image, as a development environment. It contains a rich set of helpful tools, all pre-configured to work and integrate with almost any combination of Containers and tools you may choose. We should use this Workspace container to execute the Laravel migration files.
+7. _Laradock_ introduces the _Workspace Image_, as a development environment. It contains a rich set of helpful tools, all pre-configured to work and integrate with almost any combination of _Containers_ and tools you may choose. We should use this workspace container to execute the _Laravel_ migration files.
 
 `docker-compose exec workspace bash`
 
-8. Run the Laravel migration files to create all the tables into the MySQL container.
+8. Run the _Laravel_ migration files to create all the tables into the _MySQL_ container.
 
 `artisan migrate`
 
@@ -223,34 +239,43 @@ You may want to look into [the official Composer guidelines for Installing Depen
 
 ----------
 
-### Possible Laradock installation errors
+### Possible _Laradock_ installation errors
 
-----------
+This are the main problems (and the solutions) I've found executing the `docker-compose up` command the first time, when _Docker_ downloads and installs all the containers needed.
 
-This are the main problems (and the solutions) I've found executing the `docker-compose up` command the first time, when Docker downloads and installs all the containers needed.
+1. Problems with the `mysql` _Docker_ volume:
 
-1. Problems with the `mysql` Docker volume:
+Everything works again after deleting the data folder of the `mysql` _Docker_ volume:  
 
-Delete the folder ~/.laradock/data/mysql in my Mac machine. and everything works.
+`rm ~/.laradock/data/mysql`  
+
+(This is the path in my _macOS_ machine)
 
 2. Service `aws` failed to build:
 
-Follow the [instruccions](https://github.com/laradock/laradock/issues/1156#issuecomment-335210337) written in this specific comment on a GitHub thread of the Laradock project repository.
+As pointed [here](https://github.com/laradock/laradock/issues/1156#issuecomment-335210337), a _GitHub_ thread of the _Laradock_ project repository. You should:  
+
+`mkdir aws/ssh_keys/`  
+`touch aws/ssh_keys/id_rsa.pub`  
+`docker-compose build --no-cache`
 
 3. SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client:
 
-Follow the [instruccions](https://github.com/laradock/laradock/issues/1392#issuecomment-368320353) written in this specific comment on a GitHub thread of the Laradock project repository.
+As pointed [here](https://github.com/laradock/laradock/issues/1392#issuecomment-368320353), a _GitHub_ thread of the _Laradock_ project repository. You should:  
+
+Change `MYSQL_VERSION` to `5.7` in `laradock/.env` and, then execute:  
+
+`docker-compose build --no-cache mysql`
 
 ----------
 
-### Laravel initial setup
+### _Laravel_ initial setup
 
-After installing Laravel, you may need to configure some permissions. Directories within the storage and the bootstrap/cache directories should be writable by your web server or Laravel will not run.
+After installing _Laravel_, you may need to configure some permissions. Directories within the storage and the `bootstrap/cache` directories should be writable by your web server or _Laravel_ will not run.
 
-First, enter your Laradock Workspace:
+First, enter your _Laradock Workspace_:
 
-`docker-compose exec workspace bash`
-
+`docker-compose exec workspace bash`  
 `chmod -R 777 ./storage ./bootstrap`
 
 
@@ -260,25 +285,25 @@ Set your application key to a random string.
 
 ----------
 
-### Read the API documentation
+### Read the _API_ documentation
 
-Read the API documentation through the Swagger web interface at:
+Read the _API_ documentation through the _Swagger Web Interface_ at:
 
 `http://localhost/api/docs`
 
 ----------
 
-### Maildev or Mailtrap email server
+### _Maildev_ or _Mailtrap_ email server
 
 If you want to use the "forgot password" feature…
 
-On your local development environment with Laradock:  
-the email with the link to restore your password will be sent to MailDev (a local mail server for local development). You can easely access the web interface at:
+On your local development environment with _Laradock_:  
+the email with the link to restore your password will be sent to _MailDev_ (a local mail server for local development). You can easily access the web interface at:
 
 `http://localhost:1080/`
 
-On the Heroku App testing page:
-the email with the link to restore your password will be sent to Mailtrap Heroku Add-on (a local mail server for testing purposes). You can easely access the web interface at:
+On the _Heroku_ instance environment:
+the email with the link to restore your password will be sent to _Mailtrap Heroku Add-on_ (a local mail server for testing purposes). You can easily access the web interface at:
 
 `https://heroku.mailtrap.io/inboxes/520364/messages`
 
@@ -288,8 +313,123 @@ the email with the link to restore your password will be sent to Mailtrap Heroku
 
 The *Unitary Tests* has been made using [PHPUnit](https://phpunit.de/).
 
-Assuming that you have all the dependencies installed using *Composer*, you can run the *Unitary Tests* by simply executing entering the Docker Workspace and typing the following command in the root directory of the project:
+Assuming that you have all the dependencies installed using *Composer*, you can run the *Unitary Tests* by simply executing entering the _Docker Workspace_ and typing the following command in the root directory of the project:
 
 `phpunit`
 
-The project have some basic unit tests but, the testing environment are not configured properly so, is expected to get all of them throw a Fail o Error message.
+The project have some basic unit tests but, the testing environment are not configured properly so, is expected to get all of them throw a _Fail_ o _Error_ message.
+
+----------
+
+## Deployment on _Heroku_
+
+----------
+
+### Install the _Heroku CLI_
+
+First of all, install the _Heroku CLI_ in order to be able to continue with the following steps. To do so, execute the following command in case you are using _macOS_ and have [Homebrew](https://brew.sh/) installed. In other cases, please read on the _Heroku Dev Center_ the [official documentation for installing the command line interface](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
+
+`brew install heroku/brew/heroku`
+
+----------
+
+### Initializing a _Git_ repository
+
+Initialize a _Git_ repository in the root of the project if you don't already have one.  
+
+`git init`  
+
+Commit any changes you want to deploy into the master branch (this is the one used by _Heroku_ to deploy new changes into his servers).
+
+----------
+ 
+### Creating a _Procfile_
+
+`echo web: vendor/bin/heroku-php-apache2 public/ > Procfile`  
+`git add .`  
+`git commit -m "Procfile for Heroku"`  
+
+----------
+ 
+### Creating a new application on _Heroku_
+
+`heroku create [your-app-name]`
+ 
+The string that you uses on the placeholder of `[your-app-name]` on the command above will be your name on your _Heroku Dashboard_ and also, the sub-domain of the URL provided by _Heroku_ for you application. In the case of this project, the command was executed as following:
+
+`heroku create tenejob-laravel-api`  
+
+and, the resulting URL for the app is:
+
+https://tenejob-laravel-api.herokuapp.com/   
+ 
+----------
+ 
+### Setting a _Laravel_ encryption key
+
+`heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)`
+
+Also, you need to set all the keys/values stored on your `.env` file but with the appropriate values for your _Heroku_ instance. This project's config variables can be set using the _Heroku Dashboard_ if you login into your app instance at [heroku.com](https://heroku.com/).
+
+----------
+
+### Pushing to _Heroku_
+
+`git push heroku master`
+
+----------
+
+### Provision your _Heroku_ instance with a compatible _MySQL_ add-on
+
+Add ClearDB:  
+`heroku addons:create cleardb:ignite`
+
+Retrieve the values of your ClearDB setup to be able to connect to your app with the Heroku DB:  
+`heroku config | grep CLEARDB_DATABASE_URL`
+
+For example, from this URL:  
+`mysql://b6de34rj38adfad3:a10cd36db@us-cdbr-iron-east-05.cleardb.net/heroku_c40fa7a488382ef?reconnect=true`  
+
+- the string between `mysql://` and `:` is your `DB_USERNAME` i.e b6de34rj38adfad3
+- the string between `:` and `@` is your `DB_PASSWORD` i.e `a10cd36db`
+- the string between `@` and the next `/` is your `DB_HOST` i.e `us-cdbr-iron-east-05.cleardb.net`
+- the string between `/` and `?` is your `DB_DATABASE` i.e `heroku_c40fa7a488382ef`  
+
+You should set all this values on your _Heroku App Dashboard_ or using the _Heroku CLI_.
+
+----------
+
+### Run the _Laravel_ migrations
+
+`heroku run php artisan migrate`
+
+----------
+
+### Open your shiny app deployed on _Heroku_
+
+`heroku open`
+
+----------
+
+## Bibliography
+
+### Project development tools
+
+[Laravel, a MVC PHP Framework based on Symfony](https://laravel.com/)  
+[Laradock, a full PHP development environment for Docker](http://laradock.io/)  
+[Docker, operating system level virtualization](https://docker.com/)  
+[Git, a distributed version control system](https://git-scm.com/)  
+
+### _Heroku_
+
+[Getting Started on Heroku with PHP](https://devcenter.heroku.com/articles/getting-started-with-php)  
+[The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)  
+[Getting Started with Laravel on Heroku](https://devcenter.heroku.com/articles/getting-started-with-laravel)  
+[Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars)  
+[ClearDB Mysql](https://devcenter.heroku.com/articles/cleardb)  
+[Rename your Heroku app](https://devcenter.heroku.com/articles/renaming-apps#updating-git-remotes)
+
+How to deploy a _Laravel 5_ app to _Heroku_ step by step:
+
+- [Tutorial 1, by Elusoji Sodeeq on January 2018](https://medium.com/@sdkcodes/how-to-deploy-a-laravel-app-to-heroku-24b5cb33fbe) 
+- [Tutorial 2, by Connor Leech on August 2017](https://dev.to/connor11528/deploy-a-laravel-5-app-to-heroku).
