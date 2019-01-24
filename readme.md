@@ -1,6 +1,6 @@
 You can visit a demo of the project visiting the following Heroku App instance:
 
-[http://tenejob-laravel-api.herokuapp.com/](http://tenejob-laravel-api.herokuapp.com/)
+[https://tenejob-laravel-api.herokuapp.com/](https://tenejob-laravel-api.herokuapp.com/)
 
 <p align="center">
   <img width="1072" height="auto" src="https://raw.githubusercontent.com/josepcrespo/tenejob-laravel-api/master/screenshots/index.png">
@@ -48,7 +48,7 @@ Table of contents:
 
 ## Disclaimer
 
-This is a demo project to provide an example of my skills for building a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) compliant API, using [Laravel](http://www.php.net/), writing [PHPUnit](https://phpunit.de/) unitary tests and, taking advantage of tools like [Composer](https://getcomposer.org/) (a dependency manager for PHP), [Git](https://git-scm.com/) (a distributed version control system) and, the [Unix Shell](https://en.wikipedia.org/wiki/Unix_shell). The full development environment is built on top of [Docker](https://www.docker.com/) (using the [Laradock](http://laradock.io/) project). Also reflects my knowledge of modern development platforms like [GitHub](https://github.com/) (an online source code repositories hub).
+This is a demo project to provide an example of my skills for building a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) compliant API, using [Laravel](https://laravel.com/), writing [PHPUnit](https://phpunit.de/) unitary tests and, taking advantage of tools like [Composer](https://getcomposer.org/) (a dependency manager for [PHP](http://www.php.net/)), [Git](https://git-scm.com/) (a distributed version control system) and, the [Unix Shell](https://en.wikipedia.org/wiki/Unix_shell). The full development environment is built on top of [Docker](https://www.docker.com/) (using the [Laradock](https://laradock.io/) project). Also reflects my knowledge of modern development platforms like [GitHub](https://github.com/) (an online source code repositories hub).
 
 This project has not been wrote in any case thinking to be used in production, but can be used as you wants under your total responsability. You can also fork it and, use as a foundation for your own project if you found it useful.
 
@@ -416,7 +416,7 @@ You should set all this values on your _Heroku App Dashboard_ or using the _Hero
 ### Project development tools
 
 [Laravel, a MVC PHP Framework based on Symfony](https://laravel.com/)  
-[Laradock, a full PHP development environment for Docker](http://laradock.io/)  
+[Laradock, a full PHP development environment for Docker](https://laradock.io/)  
 [Docker, operating system level virtualization](https://docker.com/)  
 [Git, a distributed version control system](https://git-scm.com/)  
 
